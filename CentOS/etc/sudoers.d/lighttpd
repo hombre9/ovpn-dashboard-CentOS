@@ -1,0 +1,13 @@
+lighttpd ALL=(ALL) NOPASSWD: /opt/ovpn-dashboard/var/www/html/admin/vpnusers/adduser.sh
+lighttpd ALL=(ALL) NOPASSWD: /opt/ovpn-dashboard/var/www/html/admin/vpnusers/removeuser_rw.sh
+lighttpd ALL=(ALL) NOPASSWD: /opt/ovpn-dashboard/var/www/html/admin/vpnusers/removeuser_s2s.sh
+lighttpd ALL=(ALL) NOPASSWD: /opt/ovpn-dashboard/var/www/html/admin/getusercount.sh
+lighttpd ALL=(ALL) NOPASSWD: /opt/ovpn-dashboard/var/www/html/admin/vpninfo/showcalog.sh
+lighttpd ALL=(ALL) NOPASSWD: /opt/ovpn-dashboard/var/www/html/admin/vpnusers/forcerevoke.sh
+lighttpd ALL=(ALL) NOPASSWD: /opt/ovpn-dashboard/var/www/html/admin/vpnusers/edits2s.sh
+lighttpd ALL=(ALL) NOPASSWD: /opt/ovpn-dashboard/var/www/html/admin/vpnconfig/applyconf.sh
+lighttpd ALL=(ALL) NOPASSWD: /opt/ovpn-dashboard/var/www/html/admin/vpnconfig/restartovpn.sh
+lighttpd ALL=(ALL) NOPASSWD: /opt/ovpn-dashboard/var/www/html/admin/vpnconfig/ovpnservicestatus.sh
+lighttpd ALL=(ALL) NOPASSWD: /opt/ovpn-dashboard/var/www/html/admin/vpnconfig/changeconf.sh
+
+
