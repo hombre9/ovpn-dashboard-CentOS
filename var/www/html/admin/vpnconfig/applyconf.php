@@ -32,7 +32,7 @@ $confname = $_GET['confname'];
 
 				<?php
 
-					$result=shell_exec("sudo /var/www/html/admin/vpnconfig/applyconf.sh -c $confname");
+					$result=shell_exec("sudo /opt/ovpn-dashboard/var/www/html/admin/vpnconfig/applyconf.sh -c $confname");
 					echo "<pre>".$result." Starting cleanup of restore folder in 5 seconds.</pre>";
 				?>
 

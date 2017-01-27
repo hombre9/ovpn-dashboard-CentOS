@@ -24,7 +24,7 @@ $lzo = $_GET['lzo'];
 
 </head>
 <body style='overflow: scroll !important;'>
-<?php $result=shell_exec('sudo /var/www/html/admin/vpnconfig/changeconf.sh -pr '.$proto.' -po '.$port.' -s '.$subnet.' -m '.$netmask.' -c '.$cipher.' -i '.$interclient.' -l '.$lzo); ?>
+<?php $result=shell_exec('sudo /opt/ovpn-dashboard/var/www/html/admin/vpnconfig/changeconf.sh -pr '.$proto.' -po '.$port.' -s '.$subnet.' -m '.$netmask.' -c '.$cipher.' -i '.$interclient.' -l '.$lzo); ?>
 
 <div class="container">
 	<div class="jumbotron col-md-12"">

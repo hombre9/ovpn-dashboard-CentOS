@@ -32,7 +32,7 @@ $pageTitle = "Edit s2s peer - finished";
 
 		<div class='well'>
 			<?php
-				$run = shell_exec('sudo /var/www/html/admin/vpnusers/edits2s.sh -c '.$clientname.' -s '.$subnet.' -n '.$netmask.' -o /var/www/html/download');
+				$run = shell_exec('sudo /opt/ovpn-dashboard/var/www/html/admin/vpnusers/edits2s.sh -c '.$clientname.' -s '.$subnet.' -n '.$netmask.' -o /opt/ovpn-dashboard/var/www/html/download');
 				$result  = shell_exec('echo '.$run.' ｜ grep "edit done"');
 				if ($result){
 					echo "success editing peer ".$clientname.".<br>";

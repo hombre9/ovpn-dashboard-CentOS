@@ -29,7 +29,7 @@ $pageTitle = "User removal (roadwarrior)";
 
 		<div class='well'>
 			<?php
-				$run = shell_exec('sudo /var/www/html/admin/vpnusers/removeuser_rw.sh -c '.$clientname.' -o /var/www/html/download');
+				$run = shell_exec('sudo /opt/ovpn-dashboard/var/www/html/admin/vpnusers/removeuser_rw.sh -c '.$clientname.' -o /opt/ovpn-dashboard/var/www/html/download');
 				$result  = shell_exec('echo '.$run.' ｜ grep "DSC ovpn RemclientWizRW done"');
 				if ($result){
 					echo "Removed ".$clientname." successfully.<br><br><pre>".$result."</pre>";

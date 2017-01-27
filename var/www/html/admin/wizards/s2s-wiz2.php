@@ -31,7 +31,7 @@ $pageTitle = "User Wizard s2s - step 2";
 
 		<div class='well'>
 			<?php
-				$run = shell_exec('sudo /var/www/html/admin/vpnusers/adduser.sh -c '.$clientname.' -t s2s -s '.$serverurl.' -n '.$network.' -o /var/www/html/download');
+				$run = shell_exec('sudo /opt/ovpn-dashboard/var/www/html/admin/vpnusers/adduser.sh -c '.$clientname.' -t s2s -s '.$serverurl.' -n '.$network.' -o /opt/ovpn-dashboard/var/www/html/download');
 				$result  = shell_exec('echo '.$run.' ｜ grep "DSC ovpn clientWiz done"');
 				if ($result){
 					echo "success creating user ".$clientname.".<br>Please go to <a href='../../download/".$clientname."/'>/download/".$clientname."</a> to retrieve the generated client config and certs.";

@@ -30,7 +30,7 @@ $pageTitle = "Certificate revocation results";
 
 		<div class='well'>
 			<?php
-				$run = shell_exec('sudo /var/www/html/admin/vpnusers/forcerevoke.sh -c '.$clientname.' -p '.$PEM);
+				$run = shell_exec('sudo /opt/ovpn-dashboard/var/www/html/admin/vpnusers/forcerevoke.sh -c '.$clientname.' -p '.$PEM);
 				$result  = shell_exec('echo '.$run.' ｜ grep "done"');
 				if ($result){
 					echo "success revoking PEM ".$PEM." for user ".$clientname.".";

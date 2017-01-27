@@ -31,7 +31,7 @@ $pageTitle = "User removal (site2site)";
 
 		<div class='well'>
 			<?php
-				$run = shell_exec('sudo /var/www/html/admin/vpnusers/removeuser_s2s.sh -c '.$clientname.' -s '.$subnet.' -m '.$netmask.' -o /var/www/html/download');
+				$run = shell_exec('sudo /opt/ovpn-dashboard/var/www/html/admin/vpnusers/removeuser_s2s.sh -c '.$clientname.' -s '.$subnet.' -m '.$netmask.' -o /opt/ovpn-dashboard/var/www/html/download');
 				$result  = shell_exec('echo '.$run.' ｜ grep "DSC ovpn RemclientWizS2S done"');
 				if ($result){
 					echo "Removed ".$clientname." successfully.<br><br><pre>".$result."</pre>";

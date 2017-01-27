@@ -8,10 +8,6 @@ not_root() {
 
 : ${1?"Usage: $0 -pr protocol -po port -s subnet -m netmask -c cipher -i intraclientenable -l lzoenable"}
 
-
-
-
-
 # Check if user is root
 [ $EUID != 0 ] && not_root
 
@@ -59,8 +55,6 @@ esac
 shift # past argument or value
 done
 
-
-
 #change protocol entry
 if [[ -n $PROTOCOL ]] 
 then
@@ -77,7 +71,6 @@ then
 	sed -i -e 's/'"$OLDPORT"'/'"port $PORT"'/g' /etc/openvpn/server.conf 
 fi
 
-
 #change transit net entry
 if [[ -n $SUBNET ]] 
 then
@@ -93,7 +86,6 @@ then
 	fi
 fi
 
-
 #change cipher entry
 if [[ -n $CIPHER ]] 
 then
@@ -101,7 +93,6 @@ then
 	OLDCIPHER=$(cat /etc/openvpn/server.conf | grep cipher)
 	sed -i -e 's/'"$OLDCIPHER"'/'"cipher $CIPHER"'/g' /etc/openvpn/server.conf 
 fi
-
 
 #change intraClientComm entry
 if [[ -n $INTERCLIENT ]] 
@@ -117,7 +108,6 @@ then
 	fi
 fi
 
-
 #change lzo entry
 if [[ -n $LZO ]] 
 then
@@ -131,8 +121,6 @@ then
 	
 	fi
 fi
-
-
 
 echo "Port $PORT"
 echo "Proto $PROTOCOL"

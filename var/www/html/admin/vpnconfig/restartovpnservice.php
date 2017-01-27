@@ -1,6 +1,6 @@
 
 <?php $pageTitle = "DSC ovpn Service restart";
-$result=shell_exec('sudo /var/www/html/admin/vpnconfig/restartovpn.sh');
+$result=shell_exec('sudo /opt/ovpn-dashboard/var/www/html/admin/vpnconfig/restartovpn.sh');
 ?>
 
 <html>

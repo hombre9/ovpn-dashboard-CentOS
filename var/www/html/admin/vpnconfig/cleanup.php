@@ -1,6 +1,6 @@
 
 <?php $pageTitle = "Cleanup";
-$result=shell_exec('rm /var/www/html/restore/*');
+$result=shell_exec('rm /opt/ovpn-dashboard/var/www/html/restore/*');
 ?>
 
 <html>

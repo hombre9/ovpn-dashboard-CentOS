@@ -32,7 +32,7 @@ $pageTitle = "Restart services";
 
 			<br><div class="col-md-12 ">
 					<b>openVPN service status overview:</b><br><br><pre><?php 
-$ovpnstatus=shell_exec('sudo /var/www/html/admin/vpnconfig/ovpnservicestatus.sh');
+$ovpnstatus=shell_exec('sudo /opt/ovpn-dashboard/var/www/html/admin/vpnconfig/ovpnservicestatus.sh');
 
 echo $ovpnstatus;
  ?></pre>

@@ -6,19 +6,10 @@ not_root() {
     exit 1
 }
 
-
-
-
-
-
 # Check if user is root
 [ $EUID != 0 ] && not_root
 
-
-
-
-
-service openvpn restart  2>&1
+systemctl restart openvpn@server.service 2>&1
 
 echo "Done."
 exit 0

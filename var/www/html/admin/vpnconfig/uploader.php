@@ -36,7 +36,7 @@ $date = shell_exec('date "+%A %W %Y %X"');
 
 				<?php
 				$success = 0;
-				$target_dir = "/var/www/html/restore/";
+				$target_dir = "/opt/ovpn-dashboard/var/www/html/restore/";
 				$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 				$uploadOk = 1;
 				$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);

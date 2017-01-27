@@ -8,10 +8,6 @@ not_root() {
 
 : ${1?"Usage: $0 -c confname"}
 
-
-
-
-
 # Check if user is root
 [ $EUID != 0 ] && not_root
 
@@ -36,8 +32,7 @@ esac
 shift # past argument or value
 done
 
-
-mv /var/www/html/restore/$CONFFILE /etc/openvpn/server.conf 2>&1
+mv /opt/ovpn-dashboard/var/www/html/restore/$CONFFILE /etc/openvpn/server.conf 2>&1
 
 echo "Done."
 exit 0

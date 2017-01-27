@@ -3,10 +3,10 @@
 $output = shell_exec('uname -a');
 $output2 = shell_exec('who');
 $output3 = shell_exec('uptime');
-$clientcount = shell_exec('sudo /var/www/html/admin/getusercount.sh');
+$clientcount = shell_exec('sudo /opt/ovpn-dashboard/var/www/html/admin/getusercount.sh');
 $load = sys_getloadavg();
 
-$ovpnactive = shell_exec("sudo /var/www/html/admin/vpnconfig/ovpnservicestatus.sh | grep active  | awk '{ print $2 }'");
+$ovpnactive = shell_exec("sudo /opt/ovpn-dashboard/var/www/html/admin/vpnconfig/ovpnservicestatus.sh | grep active  | awk '{ print $2 }'");
 $ovpnactive = str_replace(array("\r", "\n"), '', $ovpnactive);
 
 

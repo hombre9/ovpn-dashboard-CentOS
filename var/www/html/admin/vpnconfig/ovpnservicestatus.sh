@@ -6,20 +6,9 @@ not_root() {
     exit 1
 }
 
-
-
-
-
-
 # Check if user is root
 [ $EUID != 0 ] && not_root
 
-
-
-
-
-service openvpn status  2>&1
-
+systemctl status openvpn@server.service 2>&1
 
 exit 0
-
